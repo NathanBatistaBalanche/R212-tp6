@@ -7,6 +7,5 @@ const species = [...new Set(penguins.map((p) => p.species))];
 ---
 
 <Layout>
-  <a href="/" class="mt-4 inline-block font-semibold text-cyan-500 hover:underline">Retourner à l'accueil →</a>
   <LinkList title="Espèces" basePath="/penguins/specie" items={species} />
 </Layout>
