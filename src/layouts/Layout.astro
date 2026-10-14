@@ -4,8 +4,8 @@ import "../styles/global.css";
 const { pathname } = Astro.url;
 
 const links = [
-  { href: "/penguins", label: "Penguins", active: pathname.startsWith("/penguins") },
-  { href: "/cars/year", label: "Cars", active: pathname.startsWith("/cars") },
+  { href: "/", label: "Penguins", active: pathname.startsWith("/") },
+  { href: "/cars/", label: "Cars", active: pathname.startsWith("/cars/") },
 ];
 ---
 
