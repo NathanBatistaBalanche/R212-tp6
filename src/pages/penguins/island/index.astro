@@ -7,5 +7,6 @@ const islands = [...new Set(penguins.map((p) => p.island))];
 ---
 
 <Layout>
+  <a href="/" class="mt-4 inline-block font-semibold text-cyan-500 hover:underline">Retourner à l'accueil →</a>
   <LinkList title="Îles" basePath="/penguins/island" items={islands} />
 </Layout>

@@ -8,5 +8,6 @@ const sexes = [...new Set(penguins.map((p) => p.sex))].filter((s) => s != null);
 ---
 
 <Layout>
+  <a href="/" class="mt-4 inline-block font-semibold text-cyan-500 hover:underline">Retourner à l'accueil →</a>
   <LinkList title="Sexes" basePath="/penguins/sex" items={sexes} />
 </Layout>
