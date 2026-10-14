@@ -3,7 +3,12 @@ import Layout from "../../../layouts/Layout.astro";
 import PenguinChart from "../../../components/PenguinChart.astro";
 import penguins from "../../../assets/penguins.json";
 
-export const prerender = false;
+export const prerender = true;
+
+export function getStaticPaths() {
+  const species = [...new Set(penguins.map((p) => p.species))];
+  return species.map((specie) => ({ params: { specie } }));
+}
 
 const { specie } = Astro.params;
 const filtered = penguins.filter((p) => p.species === specie);
